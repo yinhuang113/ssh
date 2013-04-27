@@ -26,11 +26,12 @@ class CreateTickets < ActiveRecord::Migration
       t.string :account_manager
       t.string :open_tickets_device
       t.integer :open_ticket_user_id
-      t.integeralerts :open_ticket_company_id
-      t.string :time_entry_standard
+      t.integer :open_ticket_company_id
+      t.string :alerts
+     t.string :time_entry_standard
       t.string :time_entry_completed
       t.text :phone_logs
-      t.file :documents
+      t.text :documents
       t.string :sales_task
       t.string :products_name
       t.string :products_price
