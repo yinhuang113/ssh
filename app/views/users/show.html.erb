@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contact:</b>
+  <%= @user.contact_id %>
+</p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @user.firstName %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @user.lastName %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @user.title %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Email private:</b>
+  <%= @user.email_private %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <b>Extension:</b>
+  <%= @user.extension %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%= @user.fax %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @user.mobile %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%= @user.home_phone %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @user.company %>
+</p>
+
+<p>
+  <b>Site city:</b>
+  <%= @user.site_city %>
+</p>
+
+<p>
+  <b>Site zip:</b>
+  <%= @user.site_zip %>
+</p>
+
+<p>
+  <b>Site phone:</b>
+  <%= @user.site_phone %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @user.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
