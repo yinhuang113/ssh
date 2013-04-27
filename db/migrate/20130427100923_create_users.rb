@@ -5,8 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :firstName
       t.string :lastName
       t.string :title
-      t.string :email
-      t.string :email_private
+      t.string :email,  :null => false, :default => ""
+      t.boolean :email_private
       t.string :phone
       t.string :extension
       t.string :fax

@@ -1,0 +1,58 @@
+= form_for @product do |f|
+  - if @product.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :cost
+    = f.text_field :cost
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :manufacture
+    = f.text_field :manufacture
+  .field
+    = f.label :manufacture_part
+    = f.text_field :manufacture_part
+  .field
+    = f.label :serial_numbers
+    = f.text_field :serial_numbers
+  .field
+    = f.label :vendor_perferred
+    = f.text_field :vendor_perferred
+  .field
+    = f.label :vendor_other
+    = f.text_field :vendor_other
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :units
+    = f.text_field :units
+  .field
+    = f.label :tax
+    = f.text_field :tax
+  .field
+    = f.label :stock_on_hand
+    = f.text_field :stock_on_hand
+  .field
+    = f.label :stock_location
+    = f.text_field :stock_location
+  .field
+    = f.label :references_recent_orders
+    = f.text_field :references_recent_orders
+  .field
+    = f.label :references_companies_who_own
+    = f.text_field :references_companies_who_own
+  .actions
+    = f.submit 'Save'

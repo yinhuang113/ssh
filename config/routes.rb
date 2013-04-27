@@ -1,4 +1,27 @@
 Finish::Application.routes.draw do
+  get "dashboard/index"
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  resources :knowledgebases
+
+
+  resources :assets
+
+
+  resources :invoices
+
+
+  resources :inventories
+
+
+  resources :products
+
+
+  resources :projects
+
+
   get "static_pages/help"
 
   get "static_pages/home"
@@ -61,7 +84,7 @@ Finish::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 

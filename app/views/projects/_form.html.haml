@@ -1,0 +1,136 @@
+= form_for @project do |f|
+  - if @project.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@project.errors.count, "error")} prohibited this project from being saved:"
+      %ul
+        - @project.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :company_id
+    = f.number_field :company_id
+  .field
+    = f.label :approver
+    = f.text_field :approver
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :extension
+    = f.text_field :extension
+  .field
+    = f.label :site_city
+    = f.text_field :site_city
+  .field
+    = f.label :site_zip
+    = f.text_field :site_zip
+  .field
+    = f.label :site_phone
+    = f.text_field :site_phone
+  .field
+    = f.label :start_date
+    = f.datetime_select :start_date
+  .field
+    = f.label :end_date
+    = f.datetime_select :end_date
+  .field
+    = f.label :status
+    = f.check_box :status
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :project_manager
+    = f.text_field :project_manager
+  .field
+    = f.label :budgeted_hours
+    = f.text_field :budgeted_hours
+  .field
+    = f.label :budgeted_expenses
+    = f.text_field :budgeted_expenses
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .field
+    = f.label :tasks
+    = f.text_field :tasks
+  .field
+    = f.label :resources_name
+    = f.text_field :resources_name
+  .field
+    = f.label :resources_role
+    = f.text_field :resources_role
+  .field
+    = f.label :schedule
+    = f.text_field :schedule
+  .field
+    = f.label :products_name
+    = f.text_field :products_name
+  .field
+    = f.label :products_cost
+    = f.text_field :products_cost
+  .field
+    = f.label :products_price
+    = f.text_field :products_price
+  .field
+    = f.label :products_purchase_order
+    = f.text_field :products_purchase_order
+  .field
+    = f.label :products_bin
+    = f.text_field :products_bin
+  .field
+    = f.label :account_manager
+    = f.text_field :account_manager
+  .field
+    = f.label :open_issues
+    = f.text_field :open_issues
+  .field
+    = f.label :time_entry_standard
+    = f.text_field :time_entry_standard
+  .field
+    = f.label :time_entry_completed
+    = f.text_field :time_entry_completed
+  .field
+    = f.label :expenses
+    = f.text_field :expenses
+  .field
+    = f.label :phone_logs
+    = f.text_field :phone_logs
+  .field
+    = f.label :documents
+    = f.text_area :documents
+  .field
+    = f.label :survery_results
+    = f.text_field :survery_results
+  .field
+    = f.label :knowledgebase_articles
+    = f.text_field :knowledgebase_articles
+  .field
+    = f.label :phases
+    = f.text_field :phases
+  .field
+    = f.label :billing_method_terms
+    = f.text_field :billing_method_terms
+  .field
+    = f.label :billing_method_approver
+    = f.text_field :billing_method_approver
+  .field
+    = f.label :downpayment_info_amount
+    = f.text_field :downpayment_info_amount
+  .field
+    = f.label :downpayment_info_breakdown
+    = f.text_field :downpayment_info_breakdown
+  .field
+    = f.label :downpayment_info_invoice
+    = f.text_field :downpayment_info_invoice
+  .field
+    = f.label :downpayment_info_datepaid
+    = f.text_field :downpayment_info_datepaid
+  .field
+    = f.label :invoices
+    = f.text_field :invoices
+  .actions
+    = f.submit 'Save'
