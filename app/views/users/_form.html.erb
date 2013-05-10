@@ -1,83 +1,81 @@
 
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<section class="grid_4">
+      <div class="block-border">
+      	<div class="block-content form" id="simple_form" >
+        <h1>Information Of New User</h1>
+        
+        <fieldset class="grey-bg required">
+          <p>
+            <%= form_for(@user) do |f| %>
+            	
+	            <%= f.label :contact_id, :class =>"first-label" %>
+	    		<%= f.number_field :contact_id, :class =>"first-input"%>
+	    		<%= f.label :firstName %><br />
+			    <%= f.text_field :firstName , :placeholder =>"Yin" %>
+			
+			  
+			    <%= f.label :lastName %><br />
+			    <%= f.text_field :lastName , :placeholder =>"Huang" %>
+			
+			  
+			    <%= f.label :title %><br />
+			    <%= f.text_field :title, :placeholder =>"Admin"  %>
+			
+			  
+			    <%= f.label :email %><br />
+			    <%= f.text_field :email , :placeholder =>"yinhuang@gmail.com" %>
+			
+			  
+			    <%= f.label :email_private %><br />
+			    <%= f.text_field :email_private , :placeholder =>"true" %>
+			
+			  
+			    <%= f.label :phone %><br />
+			    <%= f.text_field :phone , :placeholder =>"+85 12345678" %>
+			
+			  
+			    <%= f.label :extension %><br />
+			    <%= f.text_field :extension , :placeholder =>"extension" %>
+			
+			  
+			    <%= f.label :fax %><br />
+			    <%= f.text_field :fax , :placeholder =>"+85 865-567-8989" %>
+			
+			  
+			    <%= f.label :mobile %><br />
+			    <%= f.text_field :mobile , :placeholder =>"+85 345-123-4563" %>
+			
+			  
+			    <%= f.label :home_phone  %><br />
+			    <%= f.text_field :home_phone , :placeholder =>"+85 678-546-3456"%>
+			
+			  
+			    <%= f.label :company %><br />
+			    <%= f.text_field :company , :placeholder =>"IT Company" %>
+			
+			  
+			    <%= f.label :site_city %><br />
+			    <%= f.text_field :site_city , :placeholder =>"Hong Kong" %>
+			
+			  
+			    <%= f.label :site_zip %><br />
+			    <%= f.text_field :site_zip , :placeholder =>"856785463456"%>
+			
+			  
+			    <%= f.label :site_phone %><br />
+			    <%= f.text_field :site_phone , :placeholder =>"+85 678-546-3456"%>
+			
+			  
+			    <%= f.label :notes %><br />
+			    <%= f.text_area :notes , :placeholder =>"this is the admin page"%>
+			    <%= f.submit :class =>"submit-button" %>
+			    <%= link_to 'Back', users_path %>
+	    	<% end %>
+          </p>
+        </fieldset>
+      </div></div>
+        </section>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        
 
-  <div class="field">
-    <%= f.label :contact_id %><br />
-    <%= f.number_field :contact_id, :placeholder =>"contact" %>
-  </div>
-  <div class="field">
-    <%= f.label :firstName %><br />
-    <%= f.text_field :firstName , :placeholder =>"Yin" %>
-  </div>
-  <div class="field">
-    <%= f.label :lastName %><br />
-    <%= f.text_field :lastName , :placeholder =>"Huang" %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :placeholder =>"Admin"  %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email , :placeholder =>"yinhuang@gmail.com" %>
-  </div>
-  <div class="field">
-    <%= f.label :email_private %><br />
-    <%= f.text_field :email_private , :placeholder =>"true" %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone , :placeholder =>"+85 12345678" %>
-  </div>
-  <div class="field">
-    <%= f.label :extension %><br />
-    <%= f.text_field :extension , :placeholder =>"extension" %>
-  </div>
-  <div class="field">
-    <%= f.label :fax %><br />
-    <%= f.text_field :fax , :placeholder =>"+85 865-567-8989" %>
-  </div>
-  <div class="field">
-    <%= f.label :mobile %><br />
-    <%= f.text_field :mobile , :placeholder =>"+85 345-123-4563" %>
-  </div>
-  <div class="field">
-    <%= f.label :home_phone  %><br />
-    <%= f.text_field :home_phone , :placeholder =>"+85 678-546-3456"%>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br />
-    <%= f.text_field :company , :placeholder =>"IT Company" %>
-  </div>
-  <div class="field">
-    <%= f.label :site_city %><br />
-    <%= f.text_field :site_city , :placeholder =>"Hong Kong" %>
-  </div>
-  <div class="field">
-    <%= f.label :site_zip %><br />
-    <%= f.text_field :site_zip , :placeholder =>"856785463456"%>
-  </div>
-  <div class="field">
-    <%= f.label :site_phone %><br />
-    <%= f.text_field :site_phone , :placeholder =>"+85 678-546-3456"%>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_area :notes , :placeholder =>"this is the admin page"%>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 

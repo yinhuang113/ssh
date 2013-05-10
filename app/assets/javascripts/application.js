@@ -12,21 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require js/libs/modernizr.custom.min
-//= require js/libs/jquery-1.6.3.min
-//= require js/libs/jquery.dataTables.min
-//= require js/libs/jquery.hashchange
 //= require js/common
 //= require js/jquery.accessibleList
 //= require js/jquery.contextMenu
 //= require js/jquery.modal
 //= require js/jquery.tip
-//= require js/list
+
 //= require js/mobile
-//= require js/old-browsers
 //= require js/searchField
-//= require js/standard.ie
-//= require js/standard
+
+
 //= require_tree .
 
 // This is a manifest file that'll be compiled into application.js, which will include all the files
