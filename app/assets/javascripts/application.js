@@ -53,5 +53,13 @@ $(document).ready(function() {
         }));
         
      });
+     
+    $('#main-nav>ul li').click (function(){
+    	$('#main-nav li').removeClass('current');
+		$(this).addClass('current');
+		$('#main-nav>ul li.users>ul li a').css('color','white');
+    });
+    $('#main-nav>ul li.users>ul li a').css('color','white');
+    
     
 });

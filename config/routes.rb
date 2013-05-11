@@ -27,7 +27,7 @@ Finish::Application.routes.draw do
   get "static_pages/home"
 
   resources :tickets
-
+  get "users/help"
 
   resources :companies
 

@@ -5,6 +5,8 @@ $(document).ready(function() {
 	$('#main-nav .users').addClass('current');
 	$('#main-nav>ul li.users>ul li').removeClass('current');
 	$('#main-nav ul li.users>ul li').eq(1).html('Update User');
+	$('#main-nav ul li.users>ul li').eq(1).css('padding-left','10px');
+	$('#main-nav ul li.users>ul li').eq(1).css('padding-right','10px');
 	$('#main-nav ul li.users>ul li').eq(1).addClass('current');
 	$('#breadcrumb li:first-child a').html('Users');
 	$('#breadcrumb li:last-child a').html('Update User');

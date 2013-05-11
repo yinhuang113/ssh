@@ -82,17 +82,38 @@ h2{
   width:auto!important;
   background:white;
   height:30px;
-  margin-left:20px;
+  margin-left:35%;
   color:blue!important;
 }
 .submit-button:hover{
   background:#D9D9D9;
 }
+.section{
+  float:left;
+  margin-right:50px;
+  width:29%;
+}
+
+  .section.last-child{
+    margin-right:0px;
+  }
+.edit_section{
+  float:left;
+  margin-right:20px;
+  width:31%;
+}
+
+  .edit_section.last-child{
+    margin-right:0px;
+  }
+
+
+
 .add_user{
-    margin-left:5%;
-    width:35%;
+    margin-left:12%;
+    width:auto;
     margin-top:50px;
-    margin-left:32%;
+    margin-bottom:20px;
     height:auto;
   form label{
     margin-bottom:-10px!important;
@@ -233,7 +254,7 @@ h2{
   }
   a{
       width: 80px;
-      margin-left: 40px;
+      margin-left: 180px;
       height: 15px;
       font-family: Verdana, Arial, Helvetica, sans-serif;
       font-size: 1em;
@@ -245,7 +266,6 @@ h2{
       border-radius: 5px;
       margin-bottom: 20px;
       margin-top: 0px;
-      position: absolute;
       text-align: center;
       padding: 7px;
       background-color: #FDFDFD;
@@ -258,7 +278,7 @@ h2{
 }
 
 .show_user{
-  margin:5% 35%;
+  margin:5% 23%;
   p{
     margin-bottom:20px;
     b{
